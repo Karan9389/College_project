@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>EasyEvent</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<style>
+    body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    background-image: url(ai.png); /* Replace with your actual image path */
+    background-size: cover;
+    background-position: center;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    backdrop-filter: blur(10px);
+}
+
+</style>
+<body>
+    <nav class="nav_bar">
+        <a href="#">Home</a>
+        <a href="#">Photographers</a>
+        <a href="#">Catering/Food</a>
+        <a href="#">Party Music</a>
+        <a href="#">Makeup</a>
+
+        <div class="action_bar">
+            <div class="action_container">
+                <span class="material-symbols-outlined action_icon">person</span>
+                <span class="action_name">Profile</span>
+            </div>
+
+            <div class="action_container">
+                <span class="material-symbols-outlined action_icon">favorite</span>
+                <span class="action_name">Wishlist</span>
+            </div>
+
+            <div class="action_container" onclick="window.location.href='pages/bag.html'">
+                <span class="material-symbols-outlined action_icon">shopping_bag</span>
+                <span class="action_name">Bag</span>
+                <span class="bag-item-count">0</span>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="Enter location...">
+            <button onclick=" Loc();"  class="search-button">Search</button>
+        </div>
+    </main>
+    <footer>
+        <div class="footer_container">
+            <div class="footer_column">
+                <h3>BOOK NOW!</h3>
+                <a href="Main.html">Main</a>
+                <a href="#">Photographers</a>
+                <a href="#">Catering</a>
+                <a href="#">Music</a>
+                <a href="#">Makeup</a>
+            </div>
+            <div class="footer_column">
+                <h3>CONTACT US</h3>
+                <a href="#">About Us</a>
+                <a href="#">Services</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms</a>
+                <a href="#">Support</a>
+            </div>
+            <div class="footer_column">
+                <h3>FOLLOW US</h3>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+        <hr>
+        <div class="copyright">
+            © 2023 www.EaseEvent.com. All rights reserved.
+        </div>
+    </footer>
+    <script src="data/items.js"></script>
+    <script src="scripts/index.js"></script>
+    <script>
+        function Loc(){
+            let someLocation = document.querySelector('.search-input').value
+            if(!someLocation){
+                alert("Please Enter Your Location")
+            }
+            else{
+                window.location.href='./index2.html'
+            }
+            
+       }
+            </script>
+</body>
+</html>
